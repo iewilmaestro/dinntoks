@@ -210,7 +210,7 @@ class Site extends Modul{
 		return $this->Run($url,$this->H1(),$data);
 	}
 	public function gsolv(){
-		$url="https://api-secure.solvemedia.com/papi/_challenge.js?k=8B2qVQGLzAyTlvnJZr1o8Vx-vqUkpvxQ;f=_ACPuzzleUtil.callbacks%5B0%5D;l=en;t=img;s=standard;c=js,h5c,h5ct,svg,h5v,v/64,v/webm,h5a,a/mp3,a/ogg,ua/chrome,ua/chrome80,os/android,os/android9,fwv/BZHLfA.apim65,htmlplus;am=N3MCZ.hDueYy4tU7-EO55g;ca=script;ts=1642376985;ct=1642378041;th=white;r=0.9610858162339488";
+		$url=$this->Save('Url_Solvemedia');
 		$r=$this->Run($url,$this->H2());
 		$ca=explode('"',$r)[5];
 		return $ca;
@@ -274,6 +274,7 @@ class Bot extends Site{
 		
 		$cookie = $this->Save('Cookie');
 		$user_agent = $this->Save('User_Agent');
+		$this->Save('Url_Solvemedia');
 		$em = $this->Save('Wallet_Fp');
 		system("termux-open-url  https://www.youtube.com/c/iewil");
 		self::bn();
