@@ -2,7 +2,7 @@
 class Modul{
 	public $host = "https://dinntoks.com";
 	public $reg = "https://bit.ly/3fDZe8Y";
-	public $a = ["iewil","dinntoks","1.1"];
+	public $a = ["iewil","dinntoks","1.2"];
 	public $disable = "
 	Script mati karena web update / scam!
 	Support Channel saya dengan cara
@@ -101,6 +101,7 @@ class Modul{
         echo "{$mm}[{$mp}▶{$mm}]{$cl} {$k}https://www.youtube.com/c/iewil\n";
         echo "{$c}{$hp} >_{$cl}{$b} Team-Function-INDO\n";
         echo "{$p}────────────────────────────────────\n";
+        echo "{$h}Link Register : ".$k.$this->reg."\n\n";
 	}
 	public function Short(){
 		/*Reset*/
@@ -269,14 +270,13 @@ class Bot extends Site{
 		}
 		self::Short();
 		self::bn();
-		echo "Link Register : ".$this->reg."\n\n";
 		cookie:
 		
 		$cookie = $this->Save('Cookie');
 		$user_agent = $this->Save('User_Agent');
 		$this->Save('Url_Solvemedia');
 		$em = $this->Save('Wallet_Fp');
-		system("termux-open-url  https://www.youtube.com/c/iewil");
+		system("termux-open-url  https://youtu.be/PAt_fiDgu6M");
 		self::bn();
 		
 		$mo=$this->dash();
